@@ -1,0 +1,13 @@
+<form (ngSubmit) = "onlogin()">
+    Enter Email: <input type = "email" name="t2" [(ngModel)] = login.email><br>
+    Enter Password: <input type="password" name="t3" [(ngModel)] = login.password><br>
+    <button type="submit"> Login</button>
+</form>
+
+<div *ngIf = "data">
+    Status: - {{data.status}}<br>
+    Name: - {{data.name}}<br>
+    Message: - {{data.statusMessage}}
+</div>
+
+<app-customer></app-customer>

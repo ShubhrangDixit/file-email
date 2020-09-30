@@ -1,0 +1,79 @@
+<div class="head">
+    <h1 class="text-center">Phone Book</h1>
+</div>
+<div class="row">
+    <div class="main">
+        <div class="card">
+
+            <!-- <div>
+                Search Contact: <input placeholder="Enter Phone or Name" type="text" [(ngModel)]='searchVal'>
+                <button (click)="searchContact()">search</button><br>
+                <h5 style="text-align: center;">{{searchVal}}</h5>
+            </div>
+            <div> -->
+                <div>
+                    Search<input type="text" [(ngModel)]='searchVal' (change)="find()">
+                  </div>
+                <div>
+                    <table *ngIf="foundName" class="tb">
+                      <tr>
+                        <th>Name</th>
+                        <th>Phone Number</th>
+                      </tr>
+                      <tr>
+                        <td>{{foundContact.name}}</td>
+                        <td>{{foundContact.phone}}</td>
+                        <td>
+                            <button (click)='deleteContact(c.name,c.phone)' type="submit">Delete</button>
+                          </td>
+                      </tr>
+                    </table>
+                  </div>
+<!-- 
+                <table *ngIf="foundName">
+                    <tr>
+                        <th>Name</th>
+                        <th>Telephone</th>
+                    </tr>
+                    <tr>
+                        <td>{{names[foundAt]}}</td>
+                        <td>{{phones[foundAt]}}</td>
+                    </tr>
+                </table>
+            </div> -->
+
+            <form (ngSubmit)='addContact()'>
+                 
+                   <input [(ngModel)]='nm' type="text" placeholder="Enter Name" name="name" id="name">
+              
+                <input [(ngModel)]='ph' type="tel" placeholder="Enter Phone" name="phone" id="phone">   
+                <button type="submit">Add Contact</button>
+            </form>
+
+            <table *ngIf = "!foundName" class="tb">
+                <tr>
+                  <td>Name</td>
+                  <td>Phone Number</td>
+                </tr>
+                <tr *ngFor='let c of ctArr'>
+                  <td>{{c.name}}</td>
+                  <td>{{c.phone}}</td>
+                  <td>
+                    <button (click)='deleteContact(c.name,c.phone)' type="submit">Delete</button>
+                  </td>
+                </tr>
+              </table>
+
+            <!-- <table class="tb">
+                <tr>
+                    <td>Name</td>
+                    <td>Phone Number</td>
+                </tr>
+                <tr *ngFor='let c of ctArr'>
+                    <td>{{c.name}}</td>
+                    <td>{{c.phone}}</td>
+                    <td>
+                        <button (click)='deleteContact(c.name,c.phone)' type="submit">Delete</button>
+                    </td>
+                </tr>
+            </table> -->

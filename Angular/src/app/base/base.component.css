@@ -1,0 +1,91 @@
+* {  
+    box-sizing: border-box;  
+    font-family: 'Muli', 'Baloo Da 2', 'Montserrat', sans-serif;  
+    }  
+
+    body {  
+        font-family: Arial;  
+        padding: 10px;  
+        background: #f1f1f1;  
+        }
+
+/* Header/Blog Title */
+.head {
+    color:white;
+    padding: 10px;
+    text-align: center;
+    background: white;
+    width: 80%;
+    margin: auto;
+  }
+  /* Style the top navigation bar */  
+  .head {  
+    overflow: hidden;  
+    background-color: teal;  
+    width: 80%;  
+    margin: auto;  
+    }
+
+    tr:nth-child(even) {background-color: #f2f2f2;}
+
+    .tb {
+        color:black;
+        padding: 10px;
+        text-align: center;
+        background: white;
+        width: 80%;
+        margin: auto;
+      }
+      .tb {  
+        overflow: hidden;  
+        background-color:antiquewhite;  
+        width: 80%;  
+        margin: auto;  
+        }
+
+.tb{
+margin-left: auto;
+margin-right: auto;
+    }
+
+.row{
+    text-align: center;
+}
+
+.head{
+    width: 80%;
+    margin: 50px auto;
+}
+
+table{
+    align-self: center;
+    align-content: center;
+    text-align: center;
+}
+td{
+    width: 30%;
+}
+
+button {
+    background-color: teal;
+    color: white;
+    padding: 15px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    height:50px;
+    width: 100px;
+  }
+  button:hover {
+    opacity: 0.8;
+  }
+  input[type=text], input[type=password], input[type=email], input[type=tel] {
+    
+    padding: 14px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    width: auto;
+    height: 50px;
+  }

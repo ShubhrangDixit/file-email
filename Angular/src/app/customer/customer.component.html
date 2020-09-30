@@ -1,0 +1,15 @@
+<form (ngSubmit) = "onSubmit()" >
+    Enter Name: <input type="text" name="t1"  [(ngModel)] = "customer.name"><br>
+    Enter Email: <input tpye = "text" name="t2"  [(ngModel)] = "customer.email"><br>
+    Enter Password: <input type = "text" name="t3"  [(ngModel)] = "customer.password"><br>
+    Upload Profile Pic: <input type="text" name="t4"   [(ngModel)] = "customer.profilePic"><br>
+  
+    <button type="submit">Register</button>
+</form>
+<div *ngIf="data">
+    <h3>Registration Status</h3>
+    Registration Status:- {{data.status}}<br>
+    Message:- {{data.statusMessage}}<br>
+    Customer Id:- {{data.custId}}<br>
+    
+</div>
